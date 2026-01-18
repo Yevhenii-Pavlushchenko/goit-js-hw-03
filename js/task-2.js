@@ -1,15 +1,13 @@
 function makeArray(firstArray, secondArray, maxLength) {
   let newArray = [];
   newArray.push(...firstArray, ...secondArray);
-  //!!варіант 1
-  newArray.length = maxLength;
-  //!!варіант 2 if
+  //!!варіант 1 if
   // if (newArray.length > maxLength) {
   //   newArray.length = maxLength;
   //   return newArray;
   // }
-  //!!варіант 3 Тернарник
-  // newArray.length > maxLength ? (newArray.length = maxLength) : newArray.length;
+  //!!варіант 2 Тернарник
+  newArray.length > maxLength ? (newArray.length = maxLength) : newArray.length;
 
   return newArray;
 }
